@@ -1,5 +1,9 @@
 package ua.artcode.week2.day2;
 
+import ua.artcode.week2.day2.model.HDD;
+import ua.artcode.week2.day2.model.ProductBucket;
+import ua.artcode.week2.day2.model.VideoAdapter;
+
 /**
  * Created by serhii on 15.02.15.
  */

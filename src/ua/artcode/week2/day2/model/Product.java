@@ -1,4 +1,4 @@
-package ua.artcode.week2.day2;
+package ua.artcode.week2.day2.model;
 
 /**
  * Created by serhii on 15.02.15.
