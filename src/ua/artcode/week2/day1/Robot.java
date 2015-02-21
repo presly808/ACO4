@@ -75,4 +75,10 @@ public class Robot {
                 power, price, model,
                 date.format());
     }
+
+    public String toString(){
+        return String.format("Robot={power=%d, price=%.2f, model=%s, date=%s}\n",
+                power, price, model,
+                date != null ? date.format() : "");
+    }
 }
