@@ -1,7 +1,7 @@
 package ua.artcode.week2.day1;
 
 
-public class Robot {
+public class Robot implements Comparable {
 
     //package-private
     private int power;//0
@@ -80,5 +80,21 @@ public class Robot {
         return String.format("Robot={power=%d, price=%.2f, model=%s, date=%s}\n",
                 power, price, model,
                 date != null ? date.format() : "");
+    }
+
+    /*@Override
+    public int compareTo(Object o) {
+        Robot other = (Robot) o;
+
+        return this.power > other.power ?
+                1 : this.power < other.power ?
+                                            -1 : 0;
+    }*/
+
+    @Override
+    public int compareTo(Object o) {
+        Robot other = (Robot) o;
+
+        return this.model.compareTo(other.model);
     }
 }
