@@ -9,7 +9,7 @@ import ua.artcode.utils.ArrayUtils;
 public class MyTimeTask implements TimeTask {
     @Override
     public void perform() {
-        int[] mas = ArrayUtils.genRandomMas(100_000, 100);
+        int[] mas = ArrayUtils.genRandomMas(100000, 100);
         SelectionSorter.sort(mas);
     }
 }
