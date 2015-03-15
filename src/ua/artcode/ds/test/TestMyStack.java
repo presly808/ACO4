@@ -1,4 +1,7 @@
-package ua.artcode.ds;
+package ua.artcode.ds.test;
+
+import ua.artcode.ds.IStack;
+import ua.artcode.ds.MyStack;
 
 /**
  * Created by serhii on 28.02.15.
@@ -14,6 +17,8 @@ public class TestMyStack {
         stack.push("ValeriIvanovich");
 
         System.out.println(stack);
+
+
     }
 
 }

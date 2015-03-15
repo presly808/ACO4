@@ -1,4 +1,4 @@
-package ua.artcode.ds;
+package ua.artcode.ds.test;
 
 import ua.artcode.week3.Human;
 
