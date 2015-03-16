@@ -1,0 +1,33 @@
+1. Dynamic Data Structure(based on Nodes)
+    (Inner, Nested, Anonymous, Local) classes
+     for-each statement
+    pattern Iterator
+
+    Use visualization for better understanding
+    http://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+    http://visualgo.net/
+
+
+2. Реализовать структуру данных Двунаправленную Очередь(Dequeue). НА ОСНОВЕ СВЯЗНОГО СПИСКА(Node).
+    Переопределяем equals, toString, clone для структуры
+   	- добавить элемент в хвост
+   	- добавить элемент в голову
+   	- забрать элемент с головы
+   	- забрать элемент с хвоста
+   	- Поиск элемента по значению (сравнение через equals)
+    - Поменять местами первый и последний элементы
+   	- Поменять местами наибольший и наименьший элементы, в случае если реализован интерфейс Comparable
+   	- Отсортировать список, в случае если реализован интерфейс Comparable
+   	- Удалить повторяющиеся элементы из списка, в случае если реализован интерфейс Comparable
+   	* Перестроить элементы в обратном порядке
+   	* Реализовать итератор
+
+3. Reverse queue (This task can be on an interview)
+
+    public static Node reverse(Node curr){
+    }
+
+4. Finish all methods in NodeUtils by loop and recursion
+    Debug all steps and analyzing stack of frames
+
+5. Finish ServiceCentre homework

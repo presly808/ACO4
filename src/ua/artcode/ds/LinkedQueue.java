@@ -4,9 +4,6 @@ import ua.artcode.ds.dynamic.Node;
 
 import java.util.Iterator;
 
-/**
- * Created by serhii on 15.03.15.
- */
 public class LinkedQueue implements IQueue, Iterable {
 
     private Node tail;
