@@ -64,5 +64,32 @@ public class NodeUtils {
         return null;
     }
 
-    
+    public static Node reverse(Node curr){
+
+        Node next = null;
+        Node prev = null;
+
+        while(curr != null){
+            next = curr.getNext();
+            curr.setNext(prev);
+            prev = curr;
+            curr = next;
+        }
+
+        return prev;
+    }
+
+    public static Node reverse(Node curr, Node next, Node prev){
+        if(curr == null){
+            return prev;
+        }
+
+        next = curr.getNext();
+        curr.setNext(prev);
+        prev = curr;
+        curr = next;
+
+        return reverse(curr, next, prev);
+    }
+
 }

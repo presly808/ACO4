@@ -29,8 +29,7 @@ public class MyStack implements IStack {
     @Override
     public Object pop() {
         if(top - 1 < 0){
-            System.err.println("Stack is empty");
-            return null;
+            throw new StackEmptyException("stack is empty");
         } else {
             top--;
             return mas[top];

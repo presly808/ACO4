@@ -16,6 +16,13 @@ public class TestMyStack {
         stack.push("Oleg");
         stack.push("ValeriIvanovich");
 
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+
         System.out.println(stack);
 
 

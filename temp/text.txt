@@ -1,0 +1,4 @@
+Юзаю кирилицю
+line for input stream
+1 2 3 4
+line3
