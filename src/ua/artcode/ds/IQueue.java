@@ -1,11 +1,13 @@
 package ua.artcode.ds;
 
 
-public interface IQueue {
+import java.util.Iterator;
 
-    Object dequeue();
+public interface IQueue<T> extends Iterable<T> {
 
-    void enqueue(Object o);
+    T dequeue();
+
+    void enqueue(T o);
 
 
 }

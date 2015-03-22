@@ -2,9 +2,6 @@ package ua.artcode.week6.io;
 
 import java.io.File;
 
-/**
- * Created by serhii on 21.03.15.
- */
 public class TestFile {
 
 

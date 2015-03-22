@@ -3,9 +3,9 @@ package ua.artcode.ds;
 /**
  * Created by serhii on 28.02.15.
  */
-public interface IStack {
+public interface IStack<T> {
 
-    void push(Object obj);
-    Object pop();
+    void push(T obj);
+    T pop();
 
 }
