@@ -1,0 +1,44 @@
+1.
+    Generics
+
+    Exceptions(Checked, Unchecked) hierarchy
+    throw, throws, try-catch-finally
+
+    design patterns(Decorator, Adapter)
+
+            java.io.*
+               File
+
+    InputStream  OutputStream
+    Reader       Writer
+
+    Scanner      PrintWriter
+
+    Serialization(Serializable, ObjectOutputStream, ObjectInputStream)
+
+    Cloning in Java
+    try methods in class Arrays
+
+    I recommend you to read Head First Design Patterns
+
+2. Add possibility to ServiceCentre save info after exit program, and load data when application starts
+
+     a) save using Serialization
+
+
+     b) save using PrintWriter and load by Scanner
+
+        example of file
+
+        1,Client,Oleg,23,1200
+        2,Directir,Vania,40,10000
+
+        If you want you can change save format in file
+
+3. Rewrite Queue(previous homework)
+    add Generics, Iterator
+
+4*. Recursion, do max tasks, debug all task, see how works methods stack
+    http://codingbat.com/java/Recursion-1
+
+
