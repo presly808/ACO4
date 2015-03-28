@@ -1,53 +1,25 @@
 package ua.artcode.dp.mvc.view;
 
+import ua.artcode.dp.mvc.controller.IUserController;
 import ua.artcode.dp.mvc.controller.UserController;
+import ua.artcode.dp.mvc.model.IUserModel;
 
 import java.util.Scanner;
 
-/**
- *
- */
-public class View {
+public class UserView implements IUserView {
 
-    private UserController controller;
+    private IUserController controller;
     private Scanner sc = new Scanner(System.in);
 
 
-    public View(UserController controller) {
+    public UserView(IUserController controller) {
         this.controller = controller;
-    }
-
-    public void start(){
-        while (true){
-            showMenu();
-            int choice = sc.nextInt();
-            choiceDispatcher(choice);
-        }
     }
 
     public void showMenu(){
         System.out.println("1. add user");
         System.out.println("2. remove user");
         System.out.println("3. show users");
-    }
-
-    public void choiceDispatcher(int choice){
-        switch (choice) {
-            case 1 : {
-                showAddUser();
-                break;
-            }
-
-            case 2 : {
-                showRemoveUserMenu();
-                break;
-            }
-
-            case 3 : {
-                showUsers();
-                break;
-            }
-        }
     }
 
     private void showUsers() {
@@ -61,9 +33,7 @@ public class View {
         controller.removeUser(name);
     }
 
-
-
-    public void showAddUser(){
+    public void showAddUserMenu(){
         System.out.println("Input name");
         String name = sc.next();
 
@@ -71,6 +41,34 @@ public class View {
         int age = sc.nextInt();
 
         controller.addUser(name,age);
+    }
+
+    @Override
+    public void start(){
+        while (true){
+            showMenu();
+            int choice = sc.nextInt();
+            choiceDispatcher(choice);
+        }
+    }
+
+    public void choiceDispatcher(int choice){
+        switch (choice) {
+            case 1 : {
+                showAddUserMenu();
+                break;
+            }
+
+            case 2 : {
+                showRemoveUserMenu();
+                break;
+            }
+
+            case 3 : {
+                showUsers();
+                break;
+            }
+        }
     }
 
 

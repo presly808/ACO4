@@ -1,22 +1,19 @@
 package ua.artcode.dp.mvc;
 
+import ua.artcode.dp.mvc.controller.IUserController;
 import ua.artcode.dp.mvc.controller.UserController;
+import ua.artcode.dp.mvc.model.IUserModel;
 import ua.artcode.dp.mvc.model.UsersHolder;
-import ua.artcode.dp.mvc.view.View;
+import ua.artcode.dp.mvc.view.UserView;
 
-/**
- * Created by serhii on 26.03.15.
- */
 public class Run {
 
     public static void main(String[] args) {
-        UsersHolder model = new UsersHolder();
-        UserController controller = new UserController(model);
-        View view = new View(controller);
+        IUserModel model = new UsersHolder();
+        IUserController controller = new UserController(model);
+        UserView userView = new UserView(controller);
 
-        view.start();
-
-
+        userView.start();
     }
 
 }

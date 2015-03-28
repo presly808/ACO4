@@ -1,8 +1,5 @@
 package ua.artcode.dp.mvc.model;
 
-/**
- * Created by serhii on 26.03.15.
- */
 public class User {
 
     private int age;

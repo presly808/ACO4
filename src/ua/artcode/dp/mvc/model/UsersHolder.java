@@ -3,18 +3,16 @@ package ua.artcode.dp.mvc.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * size - in container
- * A B _ _ _ _ _ _ _
- */
-public class UsersHolder { // my model
+public class UsersHolder implements IUserModel { // my model
 
     private List<User> users = new ArrayList<>();
 
+    @Override
     public List<User> getUsers() {
         return users;
     }
 
+    @Override
     public void setUsers(List<User> users) {
         this.users = users;
     }
