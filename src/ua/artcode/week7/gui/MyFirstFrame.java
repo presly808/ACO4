@@ -1,15 +1,17 @@
 package ua.artcode.week7.gui;
 
+import ua.artcode.io.FileHelperImpl;
 import ua.artcode.io.IFileHelper;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 
 public class MyFirstFrame extends JFrame {
 
-    private IFileHelper fileHelper;
+    private IFileHelper fileHelper = new FileHelperImpl();
     private JTextArea textArea;
     private JTextField pathField;
 
@@ -26,15 +28,21 @@ public class MyFirstFrame extends JFrame {
 
         JPanel southPanel = new JPanel(new GridLayout(1,2));
 
-        JButton saveButton = new JButton("Save");
+        JButton saveButton = new JButton("Load");
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(getContentPane(),"save pressed");
+                try {
+                    String res = fileHelper.getFileContent(pathField.getText());
+                    textArea.setText(res);
+                } catch (FileNotFoundException e1) {
+                    e1.printStackTrace();
+                    JOptionPane.showMessageDialog(getContentPane(), e1.getMessage());
+                }
             }
         });
 
-        JButton loadButton = new JButton("Load");
+        JButton loadButton = new JButton("Save");
         loadButton.addActionListener(new SaveButtonListener());
 
 
@@ -46,7 +54,7 @@ public class MyFirstFrame extends JFrame {
         textArea = new JTextArea();
         getContentPane().add(textArea,BorderLayout.CENTER);
 
-        pathField = new JTextField("C:/");
+        pathField = new JTextField("/");
         getContentPane().add(pathField, BorderLayout.NORTH);
 
     }
@@ -55,7 +63,12 @@ public class MyFirstFrame extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            //fileHelper.getFileContent();
+            try {
+                fileHelper.saveToFile(pathField.getText(), textArea.getText());
+            } catch (FileNotFoundException e1) {
+                e1.printStackTrace();
+                JOptionPane.showMessageDialog(getContentPane(), e1.getMessage());
+            }
         }
     }
 
