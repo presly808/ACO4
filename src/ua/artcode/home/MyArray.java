@@ -3,7 +3,8 @@ package ua.artcode.home;
 /**
  * Created by serhii on 21.02.15.
  */
-public class MyArray {
+public class
+        MyArray {
 
     private int size;
     private Object[] mas;
