@@ -1,0 +1,26 @@
+1. MVC pattern, binarySearch, Complexity of Algorithm
+    implement merge sort algorithm(first see visualization then write code)
+    http://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html
+
+2. Do all unfinished tasks
+
+3. Implement class FileHelper
+       - find file(dir)
+       - show directoryContent
+       - show file (content)
+       - delete file or dir
+       - copy file
+       - compare content of files
+       - deepFind (do search in file name and in file content by keyword)
+           * result of search can be written into file
+
+       -* find in file system without recursion
+       -* show content of folder
+          ex.
+           video - 70%
+           audio - 10%
+           document - 5%
+           other - 15%
+
+
+4. Implement own file manager(Add Swing for class FileHelper)
