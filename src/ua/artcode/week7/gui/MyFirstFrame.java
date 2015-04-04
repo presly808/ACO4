@@ -26,7 +26,7 @@ public class MyFirstFrame extends JFrame {
     // init all components
     public void init(){
 
-        JPanel southPanel = new JPanel(new GridLayout(1,2));
+        JPanel southPanel = new JPanel(new GridLayout(1,3));
 
         JButton saveButton = new JButton("Load");
         saveButton.addActionListener(new ActionListener() {
@@ -45,9 +45,21 @@ public class MyFirstFrame extends JFrame {
         JButton loadButton = new JButton("Save");
         loadButton.addActionListener(new SaveButtonListener());
 
+        JButton deleteButton = new JButton("Delete");
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                boolean res = fileHelper.delete(pathField.getText().trim());
+                String message = res ? "file was deleted" : "file is not exist";
+                JOptionPane.showMessageDialog(getContentPane(),message);
+            }
+        });
+
+
 
         southPanel.add(saveButton);
         southPanel.add(loadButton);
+        southPanel.add(deleteButton);
         getContentPane().add(southPanel, BorderLayout.SOUTH);
 
 

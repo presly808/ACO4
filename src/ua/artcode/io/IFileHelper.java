@@ -18,6 +18,8 @@ public interface IFileHelper {
      * */
     String[] findFiles(File dir, String keyWord);
 
+    boolean delete(String path);
+
 
 
 }

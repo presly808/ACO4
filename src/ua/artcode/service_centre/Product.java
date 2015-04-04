@@ -5,7 +5,6 @@ package ua.artcode.service_centre;
  */
 public class Product {
 
-
     private String model;
     private double price;
     private boolean fixed;

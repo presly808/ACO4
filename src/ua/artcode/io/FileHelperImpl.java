@@ -38,4 +38,10 @@ public class FileHelperImpl implements IFileHelper {
     public String[] findFiles(File dir, String keyWord) {
         return new String[0];
     }
+
+    @Override
+    public boolean delete(String path) {
+        File file = new File(path);
+        return file.exists() && file.delete();
+    }
 }
